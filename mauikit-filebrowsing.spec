@@ -8,7 +8,7 @@ Summary:	MauiKit File Browsing utilities and controls
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-filebrowsing/-/archive/v%{version}/mauikit-filebrowsing-v%{version}.tar.bz2
 
-License:	LGPL
+License:	LGPL-2.1-or-later, CC0 1.0, BSD-2-Clause
 Group:		Applications/Productivity
 BuildRequires:	cmake
 BuildRequires:	ninja
