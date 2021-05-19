@@ -1,5 +1,7 @@
-%define libname %mklibname MauiKit
-%define devname %mklibname -d MauiKit
+%define major 1
+
+%define libname %mklibname MauiKit-filebrowsing %{major}
+%define devname %mklibname -d MauiKit-filebrowsing
 
 Name:		mauikit-filebrowsing
 Version:	1.2.2
@@ -61,6 +63,34 @@ QCC2 that follow the ongoing work on the Maui HIG.
 It lets you quickly create a Maui application and access utilities and
 widgets shared amoing the other Maui apps.
 
+%package -n %{libname}
+Summary:	Library files for mauikit-filebrowsing
+Group:		System/Libraries
+Requires:	%{name} = %{EVRD}
+
+%description -n %{libname}
+Library files for mauikit-filebrowsing
+
+MauiKit is a set of utilities and "templated" controls based on Kirigami and
+QCC2 that follow the ongoing work on the Maui HIG.
+
+It lets you quickly create a Maui application and access utilities and
+widgets shared amoing the other Maui apps.
+
+%package -n %{devname}
+Summary:	Development files for mauikit-filebrowsing
+Group:		Development/KDE and Qt
+Requires:	%{name} = %{EVRD}
+
+%description -n %{devname}
+Development files for mauikit-filebrowsing
+
+MauiKit is a set of utilities and "templated" controls based on Kirigami and
+QCC2 that follow the ongoing work on the Maui HIG.
+
+It lets you quickly create a Maui application and access utilities and
+widgets shared amoing the other Maui apps.
+
 
 %prep
 %autosetup -p1 -n %{name}-v%{version}
@@ -73,3 +103,13 @@ widgets shared amoing the other Maui apps.
 %ninja_install -C build
 
 %files
+%{_libdir}/qt5/qml/org/mauikit/filebrowsing
+
+%files -n %{libname}
+%{_libdir}/libMauiKitFileBrowsing.so.%{major}*
+
+%files -n %{devname}
+%{_includedir}/MauiKit/FileBrowsing
+%{_includedir}/KF5/filebrowsing_version.h
+%{_libdir}/cmake/MauiKitFileBrowsing
+%{_libdir}/libMauiKitFileBrowsing.so
