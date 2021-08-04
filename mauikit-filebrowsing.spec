@@ -1,10 +1,10 @@
-%define major 1
+%define major 2
 
 %define libname %mklibname MauiKit-filebrowsing %{major}
 %define devname %mklibname -d MauiKit-filebrowsing
 
 Name:		mauikit-filebrowsing
-Version:	1.2.2
+Version:	2.0
 Release:	1
 Summary:	MauiKit File Browsing utilities and controls
 Url:		http://mauikit.org/
@@ -106,10 +106,10 @@ widgets shared amoing the other Maui apps.
 %{_libdir}/qt5/qml/org/mauikit/filebrowsing
 
 %files -n %{libname}
+%{_libdir}/libMauiKitFileBrowsing.so.1*
 %{_libdir}/libMauiKitFileBrowsing.so.%{major}*
 
 %files -n %{devname}
 %{_includedir}/MauiKit/FileBrowsing
-%{_includedir}/KF5/filebrowsing_version.h
 %{_libdir}/cmake/MauiKitFileBrowsing
 %{_libdir}/libMauiKitFileBrowsing.so
