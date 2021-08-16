@@ -4,7 +4,7 @@
 %define devname %mklibname -d MauiKit-filebrowsing
 
 Name:		mauikit-filebrowsing
-Version:	2.0
+Version:	2.0.0
 Release:	1
 Summary:	MauiKit File Browsing utilities and controls
 Url:		http://mauikit.org/
