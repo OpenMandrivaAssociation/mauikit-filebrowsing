@@ -103,7 +103,9 @@ widgets shared amoing the other Maui apps.
 %install
 %ninja_install -C build
 
-%files
+%find_lang mauikitfilebrowsing
+
+%files -f mauikitfilebrowsing.lang
 %{_libdir}/qt5/qml/org/mauikit/filebrowsing
 
 %files -n %{libname}
