@@ -1,11 +1,11 @@
-%define major 2
+%define major 3
 
 #define snapshot 20220106
 %define libname %mklibname MauiKit-filebrowsing %{major}
 %define devname %mklibname -d MauiKit-filebrowsing
 
 Name:		mauikit-filebrowsing
-Version:	2.2.2
+Version:	3.0.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	MauiKit File Browsing utilities and controls
 Url:		http://mauikit.org/
