@@ -1,14 +1,15 @@
 %define major 3
 
 #define snapshot 20220106
-%define libname %mklibname MauiKit-filebrowsing %{major}
+%define libname %mklibname MauiKit-filebrowsing
+%define oldlibname %mklibname MauiKit-filebrowsing 3
 %define devname %mklibname -d MauiKit-filebrowsing
 
 Name:		mauikit-filebrowsing
-Version:	3.0.0
+Version:	3.0.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	MauiKit File Browsing utilities and controls
-Url:		http://mauikit.org/
+Url:		https://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-filebrowsing/-/archive/%{?snapshot:master/mauikit-filebrowsing-master.tar.bz2#/mauikit-filebrowsing-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-filebrowsing-v%{version}.tar.bz2}
 
 License:	LGPL-2.1-or-later, CC0 1.0, BSD-2-Clause
@@ -16,7 +17,7 @@ Group:		Applications/Productivity
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
-BuildRequires:  cmake(MauiKit)
+BuildRequires:  cmake(MauiKit3)
 BuildRequires:	cmake(Qt5Qml)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Core)
@@ -67,6 +68,7 @@ widgets shared amoing the other Maui apps.
 %package -n %{libname}
 Summary:	Library files for mauikit-filebrowsing
 Group:		System/Libraries
+%rename %{oldlibname}
 Requires:	%{name} = %{EVRD}
 
 %description -n %{libname}
@@ -109,9 +111,9 @@ widgets shared amoing the other Maui apps.
 %{_libdir}/qt5/qml/org/mauikit/filebrowsing
 
 %files -n %{libname}
-%{_libdir}/libMauiKitFileBrowsing.so.%{major}*
+%{_libdir}/libMauiKitFileBrowsing3.so.%{major}*
 
 %files -n %{devname}
-%{_includedir}/MauiKit/FileBrowsing
-%{_libdir}/cmake/MauiKitFileBrowsing
-%{_libdir}/libMauiKitFileBrowsing.so
+%{_includedir}/MauiKit3/FileBrowsing
+%{_libdir}/cmake/MauiKitFileBrowsing3
+%{_libdir}/libMauiKitFileBrowsing3.so
