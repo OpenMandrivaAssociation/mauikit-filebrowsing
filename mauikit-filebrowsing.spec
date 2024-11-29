@@ -50,7 +50,7 @@ BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6Xml)
 BuildRequires:	cmake(Qt6Test)
-BuildRequires:	cmake(Qt6WebEngine)
+BuildRequires:	cmake(Qt6WebEngineCore)
 #BuildRequires:	qt5-qtgraphicaleffects
 #BuildRequires:	qt5-qtdeclarative
 #BuildRequires:	qt5-qtquickcontrols2
