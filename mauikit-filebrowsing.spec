@@ -7,7 +7,7 @@
 
 Name:		mauikit-filebrowsing
 Version:	4.0.2
-Release:	%{?snapshot:0.%{snapshot}.}1
+Release:	%{?snapshot:0.%{snapshot}.}2
 Summary:	MauiKit File Browsing utilities and controls
 Url:		https://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-filebrowsing/-/archive/%{?snapshot:master/mauikit-filebrowsing-master.tar.bz2#/mauikit-filebrowsing-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-filebrowsing-v%{version}.tar.bz2}
